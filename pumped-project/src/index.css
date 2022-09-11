@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Judson&display=swap');
+
+body {
+  height: fit-content;
+    min-width: 100%;
+ 
+}
+
+* {
+  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.forms {
+  margin-top: 8rem;
+  padding: 10rem;
+}
+
+.entrar {
+  color: white;
+}
+
+.curta {
+  position: absolute;
+  font-family: 'Judson', serif;
+ 
+
+}
+
+.main {
+  background: #E4D6D6;
+}

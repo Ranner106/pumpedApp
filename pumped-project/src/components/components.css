@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+
+.color {
+    background: #7A087A ;
+}
+
+.espaco {
+    padding: 3rem;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+}
+
+.login {
+    border-radius: 50%;
+    padding: 2rem;
+}
+
+.nav {
+    padding: 2rem;
+}

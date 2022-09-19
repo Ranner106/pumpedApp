@@ -8,12 +8,13 @@ import Profile from './pages/Profile';
 import ProfileEdit from './pages/ProfileEdit';
 import NotFound from './pages/NotFound';
 import './App.css'
+import './index.css'
 
 class App extends React.Component {
   render() {
     return (
 
-      <BrowserRouter>
+      <BrowserRouter className='app'>
 
         <Switch>
 

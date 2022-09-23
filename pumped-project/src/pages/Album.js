@@ -6,6 +6,7 @@ import MusicCard from '../components/MusicCard';
 import { getFavoriteSongs } from '../services/favoriteSongsAPI';
 import '../index.css'
 import './Album.css'
+import Loading from '../components/Loading';
 
 class Album extends React.Component {
   state = {
@@ -53,14 +54,14 @@ class Album extends React.Component {
 
   componentDidMount = () => {
     this.xablau();
-    const favorites = this.showMeFavoriteSongs();
-    this.setState({ favoritsList: favorites });
+    this.showMeFavoriteSongs();
+    
   }
 
   render() {
     const { musicState, band, favoritsList, carregando } = this.state;
     if (carregando) {
-      return <p>Carregando...</p>;
+      return <Loading/>;
     }
     return (
       <div className='flex divPrincipal'>

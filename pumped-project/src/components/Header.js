@@ -5,6 +5,7 @@ import logo from '../images/pumped.png';
 import lupa from '../images/lupa.ico';
 import favoritos from '../images/favorits-icon.png';
 import perfil from '../images/profile-group-icon.png';
+import Loading from '../components/Loading';
 
 
 
@@ -28,7 +29,7 @@ class Header extends React.Component {
   render() {
     const { carregando, login } = this.state;
     if (carregando) {
-      return <p>Carregando...</p>;
+      return <Loading/>;
     }
     return (
       <header className='flex header' >

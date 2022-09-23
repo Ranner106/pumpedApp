@@ -3,10 +3,8 @@ import { Link } from 'react-router-dom';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import Header from '../components/Header';
 import  '../index.css'
-// import foto1 from '../images/foto1.jpg';
-// import foto2 from '../images/foto2.jpg';
-// import foto3 from '../images/foto3.jpg';
-// import foto4 from '../images/foto4.jpg';
+import Loading from '../components/Loading';
+
 
 class Search extends React.Component {
   state = {
@@ -60,7 +58,7 @@ class Search extends React.Component {
       musicAlbums,
     } = this.state;
     if (carregando) {
-      return <p>Carregando...</p>;
+      return <Loading/>;
     }
     return (
 

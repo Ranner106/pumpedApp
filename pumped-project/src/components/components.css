@@ -111,6 +111,25 @@
   gap: 8px;
 }
 
+.search-icon-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.search-icon {
+  color: rgb(243, 243, 243);
+  margin: 50px auto;
+  border-radius: 50%;
+  animation: search-spin 2s linear infinite;
+}
+
+.background {
+  background: #514848;
+  width: 100vw;
+  height: 100vh;
+}
+
 @media screen and (max-width: 600px) {
 
   
@@ -147,5 +166,36 @@
   .name {
     margin-left: 20px;
     margin-top: 20px;
+  }
+
+  .search-icon-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search-icon {
+    color: rgb(243, 243, 243);
+    margin: 50px auto;
+    border-radius: 50%;
+    animation: search-spin 2s linear infinite;
+    width:16rem;
+    margin-top: 15rem;
+  }
+  
+  .background {
+    background: #514848;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+
+
+
+
+@keyframes search-spin {
+  to {
+    transform: rotateY(360deg);
   }
 }

@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.53b0aeb9.css",
+    "main.css": "/static/css/main.fbe9383c.css",
     "main.js": "/static/js/main.dbc63d77.js",
     "static/media/fotoDesktop.jpg": "/static/media/fotoDesktop.3f10924f65c90799263b.jpg",
     "static/media/lupa.ico": "/static/media/lupa.4f10970873e2be45369c.ico",
     "index.html": "/index.html",
-    "main.53b0aeb9.css.map": "/static/css/main.53b0aeb9.css.map",
+    "main.fbe9383c.css.map": "/static/css/main.fbe9383c.css.map",
     "main.dbc63d77.js.map": "/static/js/main.dbc63d77.js.map"
   },
   "entrypoints": [
-    "static/css/main.53b0aeb9.css",
+    "static/css/main.fbe9383c.css",
     "static/js/main.dbc63d77.js"
   ]
 }

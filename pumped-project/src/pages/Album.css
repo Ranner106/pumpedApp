@@ -15,9 +15,17 @@
     font-family: 'Krona One', sans-serif;
 }
 
+.sizeAlbum {
+    font-size: 1.5rem;
+}
+
+.size2 {
+    font-size: 1.25rem;
+}
 .artist-name {
     font-family: 'Kodchasan', sans-serif;
     color: #e016e0;
+    
 }
 
 .track {
@@ -40,6 +48,14 @@
     .track {
         margin-left: 5px;
         margin-top: 5px;
+    }
+
+    .sizeAlbum {
+        font-size:50px;
+    }
+    
+    .size2 {
+        font-size: 20px;
     }
     
 }

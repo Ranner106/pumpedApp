@@ -76,8 +76,8 @@ class Album extends React.Component {
               <img className='w-40' src={ band.artworkUrl100 } alt={ band.collectionName } />
             </div>
             <div className='flex flex-col justify-center gap-4 '>
-          <p className='album-name text-2xl'>{band.collectionName}</p>
-          <p className='artist-name text-xl'>{band.artistName}</p>
+          <p className='album-name size'>{band.collectionName}</p>
+          <p className='artist-name size2'>{band.artistName}</p>
 
             </div>
 

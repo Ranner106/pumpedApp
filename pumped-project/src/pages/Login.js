@@ -46,32 +46,32 @@ class Login extends React.Component {
     return (
 
       <div className= 'main' >
-        <HeaderLogin />
-        <form className="flex justify-between">
-          <img className="w-3/5" src={ capa } alt=" foto de capa " />
+        <HeaderLogin  className='cabeçalho'/>
+        <form className="form flex justify-between">
+          <img className=" capa" src={ capa } alt=" foto de capa " />
 
           <div className='flex flex-col forms '>
-            <h1 className='curta p-6 top-72 text-3xl text-center'>
+            <h1 className='curta p-6 top-72'>
             Curta músicas sem anúncios, modo offline e muito mais. Cancele quando quiser.
             </h1>
-            <label htmlFor="login">
+            <label htmlFor="login" className='inputLabel'>
               <input
                 type="text"
                 name="login"
                 value={ login }
                 onChange={ this.onInputChange }
                 placeholder="Digite o seu nome"
-                className=' mb-10 w-80 p-9 placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Search for anything'
+                className='inputLogin '
               />
               <i className="search icon" />
-            </label>
+              </label>
 
             <button
               type="submit"
               disabled={ isLoginButtonDisabled }
               onClick={ this.onSaveButtonClick }
-              className= 'bg-blue-700 p-5 w-80  mt-4 rounded-lg hover:bg-blue-400'
-            >
+              className= 'bg-blue-700 botaoLogin p-5 mt-4 rounded-lg hover:bg-blue-400'
+              >
               <p className='entrar text-xl'>
               Entrar
               </p>

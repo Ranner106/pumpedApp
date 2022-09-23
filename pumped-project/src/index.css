@@ -2,16 +2,16 @@
 
 body {
   height: fit-content;
-    min-width: 100%;
-    overflow-x: hidden;
-    overflow-y: hidden;
+  min-width: 100%;
+  overflow-x: hidden;
+
 }
 
 * {
   box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -21,7 +21,7 @@ code {
 .app {
   height: 100vh;
   width: 100vw;
-  
+
 }
 
 .forms {
@@ -36,13 +36,41 @@ code {
 .curta {
   position: absolute;
   font-family: 'Judson', serif;
- 
-
+  font-weight: 200;
+  font-size: 30px;
+  text-align: center;
 }
+
 
 .main {
   background: #E4D6D6;
 }
+
+.capa {
+  width: 60%;
+}
+
+.inputLogin  {
+  
+  font-size: 1em;
+  width: 20rem;
+  height: 3rem;
+  padding: 2px;
+  padding-left: 4px;
+  border-radius: 5px;
+  border: 2px solid #7045B5;
+  color: #4a1c8a;
+  outline: none;
+}
+
+/* .inputLogin, input:focus {
+  border: 2px solid rgb(41, 214, 191);
+} */
+
+.divPrincipal {
+  overflow-y: hidden;
+}
+
 
 .principal {
   overflow-y: scroll;
@@ -54,7 +82,7 @@ code {
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
-  
+
 }
 
 .search-content {
@@ -90,6 +118,7 @@ code {
   border: 2px solid #7045B5;
   color: #4a1c8a;
   outline: none;
+  margin-top: 1rem;
 }
 
 .search-input input:focus {
@@ -106,6 +135,7 @@ code {
   font-size: 1em;
   font-weight: 500;
   outline: none;
+  margin-top: 1rem;
 }
 
 .search-input button:hover {
@@ -132,7 +162,8 @@ code {
   box-shadow: 5px 5px 14px #18d6a4;
 }
 
-.album-name-div, .artist-name-div {
+.album-name-div,
+.artist-name-div {
   max-height: 100px;
   width: 90%;
   text-align: center;
@@ -144,7 +175,8 @@ code {
   max-height: 50px;
 } */
 
-.album-name-div p, .artist-name {
+.album-name-div p,
+.artist-name {
   text-align: center;
   max-width: 90%;
   word-wrap: break-word;
@@ -156,7 +188,7 @@ code {
   font-size: 0.95em;
   font-weight: 600;
   border-bottom: 1px solid #da14da;
-  
+
 }
 
 .album-name {
@@ -169,4 +201,75 @@ code {
 
 .artwork-div img {
   width: 100px;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .form {
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw; 
+    overflow-y: hidden; 
+    overflow-x: hidden;
+  }
+
+  .capa {
+    width: 100vw;
+    height: 60vh;
+    left: 0px;
+    top: 0px;
+  }
+
+  .forms {
+    background: #E4D6D6;
+    width: 100vw;
+    height: 50vh;
+    left: 0px;
+    border-radius: 110px 110px 0px 0px;
+    margin-top: -100px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+  }
+
+  .curta {
+    width: 85vw;
+    margin-left: -35vw;
+    margin-top: 18vh;
+    font-weight: 100;
+    font-size: 2.8vh;
+    margin-bottom: 10vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .inputLogin {
+    width: 60vw;
+    height: 6vh;
+    margin-left: -20vw;
+    margin-top: 8vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .botaoLogin {
+    width: 150px;
+    height: 80px;
+    margin-left: -7vw;
+    top: 480px;
+  }
+
+  .divPrincipal {
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  
+  
 }

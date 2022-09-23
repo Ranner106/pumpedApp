@@ -5,7 +5,7 @@ import logo from '../images/pumped.png';
 import lupa from '../images/lupa.ico';
 import favoritos from '../images/favorits-icon.png';
 import perfil from '../images/profile-group-icon.png';
-import linha from '../images/linha.png';
+
 
 
 class Header extends React.Component {
@@ -31,22 +31,22 @@ class Header extends React.Component {
       return <p>Carregando...</p>;
     }
     return (
-      <header className='flex flex-col w-96 h-max header' >
+      <header className='flex header' >
 
 
-        <img className='login w-64 ml-6' src={logo} alt='Imagem Login' />
+        <img className='login' src={logo} alt='Imagem Login' />
 
-        <div className='ml-28'>
+        <div className='name'>
 
           <p className='letraH text-xl'>
             {login}
           </p>
         </div>
 
-        <nav className='flex flex-col mt-10 ml-4'>
+        <nav className='navHeader flex'>
           <div className='flex justify-start gap-2 p-2'>
 
-            <img className='w-5' src={lupa} alt='lupa' />
+            <img className='figHeader' src={lupa} alt='lupa' />
 
 
             <Link
@@ -67,7 +67,7 @@ class Header extends React.Component {
 
           <div className='flex justify-start gap-2 p-2'>
          
-          <img className='w-5' src={favoritos} alt='Coração' />
+          <img className='figHeader' src={favoritos} alt='Coração' />
 
           <Link
             className="ui button"
@@ -86,7 +86,7 @@ class Header extends React.Component {
 
           <div className='flex justify-start gap-2 p-2'>
 
-          <img className='w-5' src={perfil} alt='bonequinhos'/>
+          <img className='figHeader' src={perfil} alt='bonequinhos'/>
           <Link
             className="ui button"
             to="/profile"

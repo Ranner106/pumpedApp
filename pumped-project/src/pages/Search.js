@@ -64,7 +64,7 @@ class Search extends React.Component {
     }
     return (
 
-      <div className='flex'>
+      <div className='flex divPrincipal'>
         
 
         <Header />
@@ -80,7 +80,7 @@ class Search extends React.Component {
             <img src={ foto4 } alt=" Logo" />
           </div> */}
 
-          <div className="flex ml-60 mt-8 search-input">
+          <div className="flex justify-center search-input">
 
             <input
               type="text"

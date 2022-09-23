@@ -22,16 +22,17 @@ class HeaderLogin extends React.Component {
               {' '}
 
             </Link>
-            <Link
+            <a
               className= 'espaco text-xl'
-              to="/search"
-              
+              href="https://github.com/Ranner106"
+              target="_blank" 
+              rel="external noreferrer"
             >
               {' '}
               suporte
               {' '}
 
-            </Link>
+            </a>
             <Link
               className= 'espaco text-xl'
               to="/search"
@@ -42,6 +43,18 @@ class HeaderLogin extends React.Component {
               {' '}
 
             </Link>
+
+            <a
+              className= 'espaco text-xl'
+              href="https://www.linkedin.com/in/ranner-de-paula-7a902b232/"
+              target="_blank" 
+              rel="external noreferrer"
+            >
+              {' '}
+              sobre nós
+              {' '}
+
+            </a>
           </nav>
 
           

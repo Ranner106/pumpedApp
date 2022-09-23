@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { addSong } from '../services/favoriteSongsAPI';
+import { TiHeart } from 'react-icons/ti';
+import './components.css'
+
 
 
 class MusicCard extends React.Component {
@@ -36,12 +39,13 @@ class MusicCard extends React.Component {
     } = this.props;
     const { isLoading, isChecked } = this.state;
     return (
-      <div>
+      <div className='main-song-div'>
         { isLoading && <p>Carregando...</p>}
-        <div className="ui segment">
+        <div className='song-p-div'>
 
-          <p className="ui left aligned header">{trackName}</p>
+          <p className='track-name'>{trackName}</p>
         </div>
+        <div className="audio-label-div">
         <audio data-testid="audio-component" src={ previewUrl } controls>
           <track kind="captions" />
           O seu navegador não suporta o elemento
@@ -49,18 +53,23 @@ class MusicCard extends React.Component {
           <code>audio</code>
           .
         </audio>
-        <label htmlFor="checkboxInput">
-          Favorita
+
+
+        
           <input
-            id="checkboxInput"
-            name="checkboxInput"
+            id={ trackId }
             type="checkbox"
-            data-testid={ `checkbox-music-${trackId}` }
-            onClick={ this.handleFavSellection }
+            onChange={ this.handleFavSellection }
+            className="favorite-input"
             checked={ isChecked }
           />
-
+        <label htmlFor={ trackId }>
+        <TiHeart size={25} className="favorite-icon" />
         </label>
+
+        </div>
+          
+          
 
       </div>
     );

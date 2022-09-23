@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan&display=swap');
+
+
+
+.topo {
+    background: #746F6F;
+    width: 1039px;
+    height: 326px;
+    gap: 10rem;
+    padding: 1rem;
+}
+
+.album-name {
+    font-family: 'Krona One', sans-serif;
+}
+
+.artist-name {
+    font-family: 'Kodchasan', sans-serif;
+    color: #e016e0;
+}
+
+.track {
+    margin-left: 20rem;
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+    .topo {
+        background: #746F6F;
+        width: 80%;
+        height: 50vh;
+        flex-direction: column;
+        gap: 20px;
+        padding: 50px;
+        margin-left: 40px;
+        margin-top: 10px;
+    }
+
+    .track {
+        margin-left: 5px;
+        margin-top: 5px;
+    }
+    
+}

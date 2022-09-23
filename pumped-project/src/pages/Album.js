@@ -4,6 +4,8 @@ import getMusics from '../services/musicsAPI';
 import Header from '../components/Header';
 import MusicCard from '../components/MusicCard';
 import { getFavoriteSongs } from '../services/favoriteSongsAPI';
+import '../index.css'
+import './Album.css'
 
 class Album extends React.Component {
   state = {
@@ -11,6 +13,7 @@ class Album extends React.Component {
     band: {},
     carregando: true,
     favoritsList: [],
+    songData:[],
 
   }
 
@@ -34,6 +37,20 @@ class Album extends React.Component {
     return result;
   }
 
+  getReleaseDate = async () => {
+    const { songData } = this.state;
+    if (songData.length) {
+      const { releaseDate } = songData[0];
+      return releaseDate.split('-')[0];
+    }
+  }
+
+  getData = async () => {
+    const { match: { params: { id } } } = this.props;
+    const result = await getMusics(id);
+    this.setState({ songData: result });
+  }
+
   componentDidMount = () => {
     this.xablau();
     const favorites = this.showMeFavoriteSongs();
@@ -46,27 +63,41 @@ class Album extends React.Component {
       return <p>Carregando...</p>;
     }
     return (
-      <div data-testid="page-album">
+      <div className='flex divPrincipal'>
 
-        <h1>Music</h1>
+        
         <Header />
 
-        <div>
-          <p data-testid="artist-name">{band.artistName}</p>
-          <p data-testid="album-name">{band.collectionName}</p>
-        </div>
+        <div className='flex flex-col  w-screen h-screen principal'>
+          
+          <div className=' flex topo '>
+          <div className="album-artwork-div">
+              <img className='w-40' src={ band.artworkUrl100 } alt={ band.collectionName } />
+            </div>
+            <div className='flex flex-col justify-center gap-4 '>
+          <p className='album-name text-2xl'>{band.collectionName}</p>
+          <p className='artist-name text-xl'>{band.artistName}</p>
+
+            </div>
+
+          </div>
+
+          <div className='flex flex-col track'>
+
         {musicState
           .slice(1)
           .map((value, index) => (
             <MusicCard
-              key={ index }
-              trackName={ value.trackName }
-              previewUrl={ value.previewUrl }
-              trackId={ value.trackId }
-              music={ musicState }
-              favoritsList={ favoritsList }
+            key={ index }
+            trackName={ value.trackName }
+            previewUrl={ value.previewUrl }
+            trackId={ value.trackId }
+            music={ musicState }
+            favoritsList={ favoritsList }
             />
-          ))}
+            ))}
+          </div>
+            </div>
       </div>
     );
   }
